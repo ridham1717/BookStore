@@ -10,8 +10,7 @@ namespace BookStore2.Repository
 {
     public class CategotyRepository : BaseRepository
     {
-        public ListResponse<Category> GetCategories (int pageIndex , int pageSize , string keyword)
-
+        public ListResponse<Category> GetCategories(int pageIndex, int pageSize, string? keyword)
         {
             keyword = keyword?.ToLower()?.Trim();
             var query = context.Categories.Where(c => keyword == null || c.Name.ToLower().Contains(keyword)).AsQueryable();
@@ -23,8 +22,6 @@ namespace BookStore2.Repository
                 Results = categories,
                 TotalRecords = totalReocrds,
             };
-
-
         }
 
         public Category  GetCategory(int id)
