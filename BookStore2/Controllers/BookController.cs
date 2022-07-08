@@ -20,7 +20,7 @@ namespace BookStore2.Controllers
 
             ListResponse<BookModel> listResponse = new ListResponse<BookModel>()
             {
-                Results = books.Results.Select(c => new BookModel()),
+                Results = books.Results.Select(c => new BookModel(c)),
                 TotalRecords = books.TotalRecords
             };
             return Ok(listResponse);

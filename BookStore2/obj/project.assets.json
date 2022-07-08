@@ -1881,7 +1881,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "BookStore2.Models": "1.0.0"
+          "BookStore2.Models": "1.0.0",
+          "Microsoft.Extensions.Configuration": "6.0.0"
         },
         "compile": {
           "bin/placeholder/BookStore2.Repository.dll": {}

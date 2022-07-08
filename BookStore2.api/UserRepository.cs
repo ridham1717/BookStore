@@ -16,6 +16,10 @@ namespace BookStore2.Repository
             return context.Users.ToList();
         }
 
+        public List<Role> GetRoles()
+        {
+            return context.Roles.ToList();
+        }
         public User Login(LoginModel model)
         {
             return context.Users.FirstOrDefault(c => c.Email.Equals(model.Email.ToLower()) && c.Password.Equals(model.password));

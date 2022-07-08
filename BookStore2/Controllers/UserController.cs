@@ -6,7 +6,7 @@ using BookStore2.Models.ViewModels;
 namespace BookStore2.Controllers;
 
 [ApiController]
-
+[Route("user")]
 public class UserController : Controller
 {
     UserRepository repository = new UserRepository();
@@ -18,20 +18,18 @@ public class UserController : Controller
         return Ok(repository.getUser());
     }
 
+   
+
     [HttpPost]
     [Route("Login")]
-
     public IActionResult Login(LoginModel model)
     {
-       User user= repository.Login(model);
-
-        if(user==null)
-        {
+        User user = repository.Login(model);
+        if (user == null)
             return NotFound();
-        }
-        return Ok(user);
 
-
+        UserModel userModel = new UserModel(user);
+        return Ok(userModel);
     }
 
     [HttpPost]
@@ -44,5 +42,13 @@ public class UserController : Controller
             return BadRequest();
         }
         return Ok(user);
+    }
+
+    [HttpGet]
+    [Route("Roles")]
+
+    public IActionResult GetRoles()
+    {
+        return Ok(repository.GetRoles());
     }
 }

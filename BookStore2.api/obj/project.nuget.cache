@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VOeMn/K+i58/YU6pmZPhtGvdAsnkBSt9ZnLhBbdfeSV3g7JJ/iw40GN0zum3RrGRNEMsRtpeP1PnEh2mN1+LmQ==",
+  "dgSpecHash": "pxLdSMPFEM+KAR+okfmp6AKYwhftBeE7bPLa4XFBc9BtQZjuLwM43Rmmtnw1pNCdL3TYc/f9QxsH7zseMyYi7g==",
   "success": true,
   "projectFilePath": "D:\\Dotnet\\BookStore2\\BookStore2.api\\BookStore2.Repository.csproj",
   "expectedPackageFiles": [
